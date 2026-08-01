@@ -98,7 +98,15 @@ ZOOM
 </div></section>
 
 <section id="register"><div class="container">
-<div class="formwrap" id="formWrap"><div class="formtop"><div class="eyebrow">FREE REGISTRATION</div><h2>మీ FREE Zoom Seat Reserve చేసుకోండి</h2><p>కింద details fill చేసి registration complete చేయండి.</p><div class="today">🔴 ఈరోజు • 5:00 PM • LIVE ON ZOOM</div></div>
+<div class="formwrap" id="formWrap"><div class="formtop"><div class="eyebrow">FREE REGISTRATION</div><h2>మీ FREE Zoom Seat Reserve చేసుకోండి</h2><p>కింద details fill చేసి registration complete చేయండి.</p><div class="today">
+🔴
+<span id="badgeDate">Loading...</span>
+•
+<span id="badgeTime">Loading...</span>
+•
+LIVE ON ZOOM
+</div>
+</div>
 
 <form id="leadForm">
 <div class="field"><label for="name">మీ పేరు *</label><input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="60" placeholder="మీ Full Name" required></div>
@@ -109,7 +117,7 @@ ZOOM
 <div class="secure">🔒 మీ details registration & session communication కోసం మాత్రమే ఉపయోగించబడతాయి.</div>
 </form></div>
 
-<div class="success" id="successWrap"><div class="success-icon">✓</div><div class="eyebrow">REGISTRATION RECEIVED</div><h2>Registration Complete! 🎉</h2><p>మీ details receive అయ్యాయి. Zoom Session miss కాకుండా Final Step complete చేయండి.</p><div class="final"><strong>ఇంకా ONE FINAL STEP 👇</strong><p>Zoom access details + meeting reminder కోసం Official WhatsApp Group లో Join అవ్వండి.</p></div>
+<div class="success" id="successWrap"><div class="success-icon">✓</div><div class="eyebrow">REGISTRATION RECEIVED</div><h2>Registration Complete! 🎉</h2><p>మీ details receive అయ్యాయి. Zoom Session miss కాకుండా Final Step complete చేయండి.</p><div class="final"><strong>ఇంకా ONE FINAL STEP 👇</strong><p>Zoom access details + meeting reminder కోసం Official WhatsApp Community లో Join అవ్వండి.</p></div>
 <a class="wa" href="https://chat.whatsapp.com/JeZFFpBhX796LDpMOkqXhJ" target="_blank" rel="noopener noreferrer">📲 WHATSAPP GROUP లో JOIN అవ్వండి →</a>
 <p class="micro">🔔 Group join అయిన తర్వాత meeting updates miss కాకుండా notifications check చేయండి.</p></div>
 </div></section>
@@ -133,10 +141,13 @@ const SCRIPT_URL="https://script.google.com/macros/s/AKfycbwagv6_F_7YwOR4Ngjn18V
     if(data.status==="success"){
 
       document.getElementById("liveBarDate").textContent=data.webinar_date;
-      document.getElementById("liveBarTime").textContent=data.webinar_time;
+document.getElementById("liveBarTime").textContent=data.webinar_time;
 
-      document.getElementById("heroDate").textContent=data.webinar_date;
-      document.getElementById("heroTime").textContent=data.webinar_time;
+document.getElementById("heroDate").textContent=data.webinar_date;
+document.getElementById("heroTime").textContent=data.webinar_time;
+
+document.getElementById("badgeDate").textContent=data.webinar_date;
+document.getElementById("badgeTime").textContent=data.webinar_time;
 
     }
 
