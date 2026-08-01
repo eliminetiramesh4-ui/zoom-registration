@@ -116,7 +116,7 @@ ZOOM
 
 <section><div class="container"><div class="disclaimer"><strong>Important Information:</strong><br>ఈ Live Presentation educational మరియు informational purposes కోసం. ఇది employment/job offer కాదు మరియు income guarantee లేదా guaranteed financial result ఇవ్వబడదు. Business results వ్యక్తి యొక్క skills, effort, consistency, experience మరియు circumstances ఆధారంగా మారవచ్చు.</div></div></section>
 <footer>© 2026 • All Rights Reserved</footer>
-<div class="sticky" id="stickyCTA"><button type="button" onclick="scrollToRegistration()">🔴 ఈరోజు 5 PM • FREE ZOOM SEAT RESERVE →</button></div>
+<div class="sticky" id="stickyCTA"><button type="button" onclick="scrollToRegistration()">🔴 • CONFIRM MY FREE SEAT NOW →</button></div>
 
 <script>
 const SCRIPT_URL="https://script.google.com/macros/s/AKfycbwagv6_F_7YwOR4Ngjn18VSxfR_cUs9ia7XVVUMyD12LomIl83SYfTwMTIG66Dmjz_j/exec";
@@ -168,7 +168,6 @@ form.addEventListener("submit",async function(e){
 e.preventDefault();if(isSubmitting)return;
 if(!form.checkValidity()){form.reportValidity();return}
 if(!validPhone(phone.value)){phoneError.style.display="block";phone.focus();return}
-if(document.getElementById("attendance").value==="NO"){alert("ఈ registration ఈరోజు 5:00 PM Live Zoom Session attend చేయగలిగే వారి కోసం. మీరు available ఉన్న రోజు register చేయండి.");return}
 document.getElementById("registered_at").value=new Date().toISOString();
 isSubmitting=true;submitBtn.disabled=true;submitBtn.textContent="మీ SEAT RESERVE చేస్తున్నాం...";
 try{
