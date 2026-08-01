@@ -44,14 +44,39 @@ h2{font-size:clamp(27px,5vw,43px);line-height:1.25;margin-bottom:11px}.head p{co
 </style>
 </head>
 <body>
-<div class="livebar"><span class="dot"></span>FREE LIVE TELUGU SESSION • ఈరోజు సాయంత్రం <span class="en">5:00 PM • ZOOM</span></div>
-
+<div class="livebar">
+<span class="dot"></span>
+FREE LIVE TELUGU SESSION •
+<span id="liveBarDate">Loading...</span>
+•
+<span class="en" id="liveBarTime">Loading...</span>
+•
+ZOOM
+</div>
 <header class="hero"><div class="container"><div class="hero-inner">
 <div class="pill">FREE • LIVE • BEGINNER FRIENDLY</div>
 <h1>Additional Income Opportunity గురించి Explore చేస్తున్నారా?<span class="grad">Online Business ఎలా పనిచేస్తుందో ముందుగా తెలుసుకోండి.</span></h1>
 <p>మీరు Beginner అయినా సరే — Online Business ఎలా పనిచేస్తుంది, ఎలా Start చేయాలి, ఈ Business Model మీకు suitable అవుతుందా అనే విషయాలను simple Telugu లో జరిగే <strong>Free Live Zoom Presentation</strong> లో తెలుసుకోండి.</p>
-<div class="event"><div><small>WHEN</small><strong>ఈరోజు</strong></div><div><small>TIME</small><strong class="en">5:00 PM</strong></div><div><small>WHERE</small><strong class="en">ZOOM LIVE</strong></div></div>
-<button type="button" class="btn" onclick="scrollToRegistration()">ఈరోజు 5 PM FREE ZOOM SEAT RESERVE చేయండి →</button>
+<div class="event">
+
+<div>
+<small>DATE</small>
+<strong id="heroDate">Loading...</strong>
+</div>
+
+<div>
+<small>TIME</small>
+<strong class="en" id="heroTime">Loading...</strong>
+</div>
+
+<div>
+<small>WHERE</small>
+<strong class="en">ZOOM LIVE</strong>
+</div>
+
+</div>
+  
+  <button type="button" class="btn" onclick="scrollToRegistration()">ఈరోజు 5 PM FREE ZOOM SEAT RESERVE చేయండి →</button>
 <p class="micro">✓ Free Registration • ✓ Telugu Live Session • ✓ Beginners Welcome</p>
 </div></div></header>
 
@@ -79,11 +104,6 @@ h2{font-size:clamp(27px,5vw,43px);line-height:1.25;margin-bottom:11px}.head p{co
 <div class="field"><label for="name">మీ పేరు *</label><input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="60" placeholder="మీ Full Name" required></div>
 <div class="field"><label for="phone">WhatsApp Number *</label><input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="ఉదా: 9876543210" required><div class="error" id="phoneError">Valid 10-digit Indian WhatsApp number enter చేయండి.</div></div>
 <div class="field"><label for="occupation">ప్రస్తుతం మీరు ఏం చేస్తున్నారు? *</label><select id="occupation" name="occupation" required><option value="">Select చేయండి</option><option>Student</option><option>Employee</option><option>Homemaker</option><option>Business</option><option>Self Employed</option><option>Other</option></select></div>
-<div class="field"><label for="goal">ఈ Opportunity గురించి ఎందుకు తెలుసుకోవాలనుకుంటున్నారు? *</label><select id="goal" name="goal" required><option value="">Main Reason Select చేయండి</option><option value="Additional Income Opportunity">Additional Income Opportunity కోసం</option><option value="Build My Own Business">నా సొంత Business Build చేయాలని</option><option value="Learn New Skills">కొత్త Skills నేర్చుకోవాలని</option><option value="Understand the Opportunity">ముందుగా Opportunity అర్థం చేసుకోవాలని</option></select></div>
-<div class="field"><label for="attendance">ఈరోజు 5:00 PM కి పూర్తి 30–45 minutes Zoom Session attend చేయగలరా? *</label><select id="attendance" name="attendance" required><option value="">Select చేయండి</option><option value="YES">అవును, తప్పకుండా Attend చేస్తాను</option><option value="MAYBE">ప్రయత్నిస్తాను</option><option value="NO">ఈరోజు Attend చేయలేను</option></select></div>
-<div class="field"><label for="interest">Business Model మీకు suitable అనిపిస్తే Next Steps తెలుసుకోవడానికి open గా ఉన్నారా? *</label><select id="interest" name="interest" required><option value="">Select చేయండి</option><option value="YES">అవును, Next Steps తెలుసుకుంటాను</option><option value="MAYBE">ముందుగా పూర్తి Details తెలుసుకోవాలి</option><option value="INFO">ప్రస్తుతం Information మాత్రమే కావాలి</option></select></div>
-<div class="commit">💡 <strong>Important:</strong> Register చేసిన తర్వాత Zoom link & meeting reminder కోసం Official WhatsApp Group లో join అవ్వండి.</div>
-<div class="consent"><input id="consent" name="whatsapp_consent" value="YES" type="checkbox" required><label for="consent">ఈ registration కి సంబంధించిన Zoom details, meeting reminders మరియు relevant updates ని WhatsApp ద్వారా receive చేయడానికి నేను అంగీకరిస్తున్నాను.</label></div>
 <input type="hidden" name="utm_source" id="utm_source"><input type="hidden" name="utm_medium" id="utm_medium"><input type="hidden" name="utm_campaign" id="utm_campaign"><input type="hidden" name="utm_content" id="utm_content"><input type="hidden" name="utm_term" id="utm_term"><input type="hidden" name="page_url" id="page_url"><input type="hidden" name="registered_at" id="registered_at">
 <button class="submit" id="submitBtn" type="submit">నా FREE ZOOM SEAT CONFIRM చేయండి →</button>
 <div class="secure">🔒 మీ details registration & session communication కోసం మాత్రమే ఉపయోగించబడతాయి.</div>
@@ -100,6 +120,36 @@ h2{font-size:clamp(27px,5vw,43px);line-height:1.25;margin-bottom:11px}.head p{co
 
 <script>
 const SCRIPT_URL="https://script.google.com/macros/s/AKfycbwagv6_F_7YwOR4Ngjn18VSxfR_cUs9ia7XVVUMyD12LomIl83SYfTwMTIG66Dmjz_j/exec";
+  async function loadWebinar(){
+
+  try{
+
+    const response = await fetch(
+      SCRIPT_URL + "?action=webinar&t=" + Date.now()
+    );
+
+    const data = await response.json();
+
+    if(data.status==="success"){
+
+      document.getElementById("liveBarDate").textContent=data.webinar_date;
+      document.getElementById("liveBarTime").textContent=data.webinar_time;
+
+      document.getElementById("heroDate").textContent=data.webinar_date;
+      document.getElementById("heroTime").textContent=data.webinar_time;
+
+    }
+
+  }catch(e){
+
+    console.log(e);
+
+  }
+
+}
+
+loadWebinar();
+  
 const form=document.getElementById("leadForm"),formWrap=document.getElementById("formWrap"),successWrap=document.getElementById("successWrap"),submitBtn=document.getElementById("submitBtn"),phone=document.getElementById("phone"),phoneError=document.getElementById("phoneError"),stickyCTA=document.getElementById("stickyCTA");
 let isSubmitting=false;
 
