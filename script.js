@@ -192,7 +192,7 @@ mode:"no-cors"
 
 );
 
-/* Redirect after 800ms */
+/* Redirect after 100ms */
 
 setTimeout(()=>{
 
