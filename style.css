@@ -38,7 +38,7 @@ overflow:hidden;
 
 width:100%;
 
-max-width:430px;
+max-width:460px;
 
 padding:20px;
 
@@ -198,11 +198,11 @@ color:#9BA8BB;
 
 button{
 
-height:58px;
+height:64px;
 
 border:none;
 
-border-radius:18px;
+border-radius:22px;
 
 background:linear-gradient(
 135deg,
@@ -211,7 +211,7 @@ background:linear-gradient(
 
 color:#ffffff;
 
-font-size:18px;
+font-size:20px;
 
 font-weight:800;
 
@@ -230,6 +230,19 @@ box-shadow:
 
 }
 
+.fast{
+
+margin-top:15px;
+
+text-align:center;
+
+font-size:14px;
+
+color:#8FE388;
+
+font-weight:600;
+
+}
 .trust{
 
 text-align:center;
