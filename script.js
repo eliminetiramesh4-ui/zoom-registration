@@ -194,12 +194,11 @@ mode:"no-cors"
 
 /* Redirect after 100ms */
 
-setTimeout(()=>{
+if (typeof fbq !== "undefined") {
+    fbq("track", "Lead");
+}
 
-window.location.href=COMMUNITY_URL;
-
-},800);
-
+window.location.href = COMMUNITY_URL;
 }catch(error){
 
 console.log(error);
