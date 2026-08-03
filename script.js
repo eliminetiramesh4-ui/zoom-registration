@@ -189,7 +189,39 @@ if (typeof fbq !== "undefined") {
 }
 
 // Open WhatsApp immediately
-window.location.href = COMMUNITY_URL;
+// Show Success Screen
+
+document.getElementById("leadForm").style.display = "none";
+
+document.getElementById("successBox").style.display = "block";
+
+// Manual Join Button
+
+document.getElementById("joinBtn").href = COMMUNITY_URL;
+
+// Countdown
+
+let seconds = 3;
+
+const countdown = document.getElementById("countdown");
+
+countdown.innerText = seconds;
+
+const timer = setInterval(() => {
+
+    seconds--;
+
+    countdown.innerText = seconds;
+
+    if (seconds <= 0) {
+
+        clearInterval(timer);
+
+        window.location.href = COMMUNITY_URL;
+
+    }
+
+}, 1000);
 
 }catch(error){
 console.log(error);
