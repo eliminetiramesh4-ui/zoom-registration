@@ -118,7 +118,7 @@ return;
 
 submitButton.disabled=true;
 
-submitButton.innerHTML="Submitting...";
+submitButton.innerHTML="Opening WhatsApp...";
 
 /* Save Current Page */
 
@@ -198,7 +198,7 @@ if (typeof fbq !== "undefined") {
     fbq("track", "Lead");
 }
 
-window.location.href = COMMUNITY_URL;
+window.location.replace(COMMUNITY_URL);
 }catch(error){
 
 console.log(error);
