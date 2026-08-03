@@ -176,31 +176,22 @@ params.get("utm_term")||""
 
 try{
 
-await fetch(
+// Fire request in background (don't wait)
+fetch(SCRIPT_URL, {
+    method: "POST",
+    body: formData,
+    mode: "no-cors"
+});
 
-SCRIPT_URL,
-
-{
-
-method:"POST",
-
-body:formData,
-
-mode:"no-cors"
-
-}
-
-);
-
-/* Redirect after 100ms */
-
+// Fire Meta Pixel immediately
 if (typeof fbq !== "undefined") {
     fbq("track", "Lead");
 }
 
-window.location.replace(COMMUNITY_URL);
-}catch(error){
+// Open WhatsApp immediately
+window.location.href = COMMUNITY_URL;
 
+}catch(error){
 console.log(error);
 
 alert(
