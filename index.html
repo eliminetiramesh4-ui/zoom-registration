@@ -136,37 +136,55 @@ ZOOM
 
 </p>
 
-<form
-id="leadForm">
+<form id="leadForm">
 
-<input
+  <!-- NAME -->
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Full Name"
+    autocomplete="name"
+    required
+  >
 
-type="text"
+  <!-- WHATSAPP NUMBER -->
+  <input
+    type="tel"
+    name="phone"
+    placeholder="మీ WhatsApp Number"
+    inputmode="numeric"
+    pattern="[0-9]{10}"
+    maxlength="10"
+    minlength="10"
+    autocomplete="tel-national"
+    title="దయచేసి 10-digit mobile number నమోదు చేయండి"
+    required
+  >
 
-name="name"
+  <!-- ATTENDANCE FIELD - NEW -->
+  <select
+    name="attendance"
+    id="attendance"
+    required
+    aria-label="సాయంత్రం 5 PM Zoom Sessionకు హాజరు"
+  >
+    <option value="" disabled selected>
+      మీరు సాయంత్రం 5:00 PM Sessionకు హాజరు కాగలరా?
+    </option>
 
-placeholder="Your Full Name"
+    <option value="Yes - Can Attend">
+      అవును, హాజరవుతాను
+    </option>
 
-required>
+    <option value="Need More Details">
+      మరిన్ని వివరాలు కావాలి
+    </option>
+  </select>
 
-<input
-
-type="tel"
-
-name="phone"
-
-placeholder="మీ WhatsApp Number"
-
-maxlength="10"
-
-required>
-
-<button
-type="submit">
-
-🚀 REGISTER FOR FREE SESSION →
-
-</button>
+  <!-- SUBMIT BUTTON -->
+  <button type="submit">
+    🚀 REGISTER FOR FREE SESSION →
+  </button>
 
 </form>
 
