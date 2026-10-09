@@ -484,3 +484,35 @@ transform:scale(1);
 }
 
 }
+
+/* Attendance dropdown - matches existing form design */
+#leadForm select[name="attendance"] {
+  display: block;
+  width: 100%;
+  min-height: 56px;
+  padding: 16px;
+  margin: 12px 0;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background-color: #152136;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#leadForm select[name="attendance"]:invalid {
+  color: #a8b2c4;
+}
+
+#leadForm select[name="attendance"] option {
+  background-color: #152136;
+  color: #ffffff;
+}
+
+#leadForm select[name="attendance"]:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
