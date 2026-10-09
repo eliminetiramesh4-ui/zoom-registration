@@ -6,7 +6,7 @@ const SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbwagv6_F_7YwOR4Ngjn18VSxfR_cUs9ia7XVVUMyD12LomIl83SYfTwMTIG66Dmjz_j/exec";
 
 const COMMUNITY_URL =
-"https://chat.whatsapp.com/JeZFFpBhX796LDpMOkqXhJ";
+"https://chat.whatsapp.com/IWPMEtSoLhUH7XmXbFD2Pt";
 
 /* ===========================================
    ELEMENTS
